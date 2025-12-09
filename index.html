@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="google-site-verification" content="zbiT_lPYEqswotzql1Fe8pwUA1l9yRSOOmr_ySK-FaE" />
     <meta name="description" content="OYS Tutor (On Your Service Tutor) offers online tuition across India and home tutoring in Bangalore for Maths, Science, English and Coding with simple, student-friendly teaching." />
     <meta name="keywords" content="OYS Tutor, On Your Service Tutor, tuition in Bangalore, home tuition Bangalore, online tuition India, maths tuition, science tuition, English tuition, coding tuition" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -869,6 +868,7 @@
           <a href="#subjects">Subjects</a>
           <a href="#pricing">Pricing</a>
           <a href="#why">Why OYS</a>
+          <a href="#tutor-jobs">Tutor Jobs</a>
           <a href="#contact">Contact</a>
           <button class="nav-cta" onclick="scrollToId('contact')">
             Free Demo Class
@@ -1258,6 +1258,60 @@
           </div>
         </section>
 
+        <section class="section" id="tutor-jobs">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Tutor opportunity</div>
+              <h2 class="section-title">Apply for home tutor jobs with OYS Tutor.</h2>
+            </div>
+            <p class="section-subtitle">
+              If you are a tutor who wants to take home tuition or online classes with OYS Tutor in and around Bangalore, you can share your details using the form below.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                We are slowly building a small network of calm, student‑friendly tutors who can handle school curriculum, explain concepts clearly and communicate politely with parents.
+              </p>
+              <ul class="about-points">
+                <li>
+                  <span>✔</span>
+                  <div>Home tutoring opportunities in Bangalore (area‑wise matching based on your location).</div>
+                </li>
+                <li>
+                  <span>✔</span>
+                  <div>Online class opportunities for Maths, Science, English and Coding.</div>
+                </li>
+                <li>
+                  <span>✔</span>
+                  <div>Flexible hours &mdash; you can choose evening, weekend or limited weekly slots.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-number">Step 1</div>
+                <div class="stat-label">Fill tutor form</div>
+                <p class="stat-note">Share your subjects, classes you can handle, area and availability.</p>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">Step 2</div>
+                <div class="stat-label">Shortlisting call</div>
+                <p class="stat-note">We will connect on call / WhatsApp when there is a suitable requirement.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="contact-note" style="margin-top:1rem;">
+            To apply as a home or online tutor, please fill this Google Form:
+            <br />
+            <a href="https://forms.gle/XDgY867Dc9XwQnqb9" target="_blank" rel="noopener">Click here to apply as a tutor</a>
+          </p>
+          <!-- Replace the forms.gle link above with your real Tutor Application Google Form URL -->
+        </section>
+
         <section class="section" id="contact">
           <div class="section-header">
             <div>
@@ -1424,11 +1478,51 @@
 
       const contactForm = document.getElementById("contactForm");
       const successMessage = document.getElementById("successMessage");
+      const googleFormUrl = "https://forms.gle/s6c62Bbx6F3NLyaFA"; // OYS Tutor demo class Google Form
 
       contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
+
+        const parentName = document.getElementById("parentName").value.trim();
+        const studentName = document.getElementById("studentName").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const cls = document.getElementById("class").value;
+        const subject = document.getElementById("subject").value;
+        const timing = document.getElementById("timing").value.trim();
+        const messageExtra = document.getElementById("message").value.trim();
+
+        let msg = "Hi OYS Tutor, I am interested in a demo class.";
+        msg += "
+Parent: " + (parentName || "-");
+        msg += "
+Student: " + (studentName || "-");
+        msg += "
+Phone: " + (phone || "-");
+        msg += "
+Class: " + (cls || "-");
+        msg += "
+Subject: " + (subject || "-");
+        msg += "
+Preferred timing: " + (timing || "-");
+        if (messageExtra) {
+          msg += "
+Notes: " + messageExtra;
+        }
+
+        const waUrl =
+          "https://wa.me/919977874305?text=" + encodeURIComponent(msg);
+
+        // Open WhatsApp chat with filled details
+        window.open(waUrl, "_blank");
+
+        // Also open Google Form in a new tab if you replaced the placeholder link
+        if (googleFormUrl && !googleFormUrl.includes("your-google-form-id")) {
+          window.open(googleFormUrl, "_blank");
+        }
+
         successMessage.classList.add("visible");
         contactForm.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
       });
     </script>
 
