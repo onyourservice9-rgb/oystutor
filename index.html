@@ -1,83 +1,63 @@
 <!DOCTYPE html>
-<style>
-body {font-family: Arial, sans-serif;margin: 0;padding: 0;background: #f9fafb;color: #111;}
-header {background: linear-gradient(90deg, #1e3a8a, #2563eb);color: white;text-align: center;padding: 3rem 1rem;}
-header h1 {font-size: 2.5rem;margin-bottom: 0.5rem;}
-header p {font-size: 1.1rem;}
-nav {display: flex;justify-content: center;gap: 1.5rem;padding: 1rem;background: #111827;}
-nav a {color: white;text-decoration: none;font-weight: bold;}
-nav a:hover {text-decoration: underline;}
-.buttons {margin-top: 1.5rem;}
-.buttons a {display: inline-block;margin: 0.5rem;padding: 0.8rem 1.5rem;background: #facc15;color: #111827;font-weight: bold;border-radius: 6px;text-decoration: none;}
-.buttons a:hover {background: #fde047;}
-section {padding: 3rem 1.5rem;max-width: 900px;margin: auto;}
-section h2 {font-size: 1.8rem;font-weight: bold;text-align: center;color: #1e3a8a;}
-section p {text-align: center;margin-top: 1rem;line-height: 1.6;}
-.link-btn {display: block;text-align: center;margin: 2rem auto;background: #2563eb;color: white;padding: 0.8rem 1.2rem;border-radius: 6px;width: fit-content;font-weight: bold;text-decoration: none;}
-.link-btn:hover {background: #1d4ed8;}
-footer {background: #111827;color: #d1d5db;text-align: center;padding: 2rem;}
-</style>
-</head>
-<body>
-<header>
-<h1>OYS Tutor – On Your Service Tutor</h1>
-<p>Personalised Online & Home Tuition in Bangalore</p>
-<div class="buttons">
-<a href="https://forms.gle/s6c62Bbx6F3NLyaFA" target="_blank">📞 Free Demo Class</a>
-<a href="#tutor-jobs">👨‍🏫 Join as Tutor</a>
-</div>
-</header>
-
-
-<nav>
-<a href="#about">About</a>
-<a href="#subjects">Subjects</a>
-<a href="#pricing">Pricing</a>
-<a href="#tutor-jobs">Tutor Jobs</a>
-<a href="#contact">Contact</a>
-</nav>
-
-
-<section id="about">
-<h2>About OYS Tutor</h2>
-<p>OYS Tutor (On Your Service Tutor) provides personalised online and home tuition for school and college students in Bangalore. We focus on clear concept explanation, exam preparation, and stress-free learning. Tutors are trained to maintain friendly communication with parents and guide students patiently.</p>
 </section>
-
-
-<section id="subjects">
-<h2>Subjects We Cover</h2>
-<p>Mathematics, Science, English, and Coding. We also help with homework, project guidance, and exam planning.</p>
-</section>
-
-
-<section id="pricing">
-<h2>Pricing Details</h2>
-<p><strong>Online Classes:</strong> ₹150/hour</p>
-<p><strong>Home Tutoring (Bangalore HQ):</strong> ₹450/hour</p>
-<p>Payment on a daily basis after each session. Transparent and flexible.</p>
-</section>
-
-
-<section id="tutor-jobs">
-<h2>👨‍🏫 Tutor Jobs</h2>
-<p>If you are a tutor who wants to take home or online classes with OYS Tutor, apply now. We offer flexible hours and student matching based on your location in Bangalore.</p>
-<a href="https://forms.gle/XDgY867Dc9XwQnqb9" class="link-btn" target="_blank">Apply as a Tutor</a>
-</section>
-
-
-<section id="contact">
-<h2>📞 Free Demo Class</h2>
-<p>Interested in a demo class? Fill out this quick Google Form below and we’ll contact you soon!</p>
-<a href="https://forms.gle/s6c62Bbx6F3NLyaFA" class="link-btn" target="_blank">Book a Free Demo Class</a>
-</section>
+</main>
 
 
 <footer>
-&copy; <span id="year"></span> OYS Tutor. HQ: Bangalore | WhatsApp: +91-9977874305 | Email: onyourservice9@gmail.com
+<div>
+&copy; <span id="year"></span> <strong>OYS Tutor</strong>. HQ: Bangalore &mdash; Online &amp; Home Tuition.
+</div>
+<div class="footer-links">
+<a href="#top">Back to top</a>
+<a href="#contact">Free demo</a>
+</div>
 </footer>
 
 
+<a
+href="https://wa.me/919977874305?text=Hi%20OYS%20Tutor%2C%20I%20am%20interested%20in%20a%20demo%20class"
+class="whatsapp-button"
+target="_blank"
+rel="noopener"
+aria-label="Chat with OYS Tutor on WhatsApp"
+>
+<svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+<path
+d="M16 3C9.373 3 4 8.373 4 15c0 2.64.824 5.086 2.243 7.11L4 29l7.09-2.214A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 2c5.534 0 10 4.466 10 10s-4.466 10-10 10a9.9 9.9 0 0 1-4.84-1.283l-.346-.197-4.19 1.308 1.37-4.06-.225-.356A9.9 9.9 0 0 1 6 15C6 9.466 10.466 5 16 5Zm-3.14 4.5c-.262 0-.684.098-1.04.492-.356.394-1.365 1.332-1.365 3.25 0 1.918 1.398 3.77 1.594 4.028.197.262 2.686 4.29 6.64 5.836 3.28 1.29 3.95 1.163 4.66 1.09.71-.072 2.29-.936 2.613-1.84.324-.904.324-1.68.23-1.84-.098-.164-.36-.262-.753-.46-.394-.197-2.33-1.15-2.69-1.282-.356-.132-.616-.197-.876.197-.262.394-1.006 1.282-1.233 1.544-.228.262-.455.295-.848.098-.394-.197-1.663-.613-3.167-1.953-1.171-1.044-1.96-2.336-2.188-2.73-.228-.394-.024-.606.172-.803.176-.176.394-.46.59-.69.196-.23.262-.394.394-.656.132-.262.066-.492-.033-.69-.098-.197-.86-2.063-1.194-2.824-.295-.69-.6-.748-.861-.756Z"
+/>
+</svg>
+</a>
+
+
 <script>
+function scrollToId(id) {
+const el = document.getElementById(id);
+if (!el) return;
+el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+
+navToggle.addEventListener("click", () => {
+navLinks.classList.toggle("open");
+});
+
+
+navLinks.querySelectorAll("a").forEach((link) => {
+link.addEventListener("click", () => {
+navLinks.classList.remove("open");
+});
+});
+
+
+function openDemoForm() {
+window.open("https://forms.gle/s6c62Bbx6F3NLyaFA", "_blank");
+}
+
+
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
