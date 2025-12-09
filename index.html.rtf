@@ -1,0 +1,1452 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+  <head>\
+    <meta charset="UTF-8" />\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+    <title>OYS Tutor - At Your Service for Learning</title>\
+    <style>\
+      :root \{\
+        --bg: #050816;\
+        --bg-soft: #0b1020;\
+        --accent: #4f46e5;\
+        --accent-soft: rgba(79, 70, 229, 0.12);\
+        --accent-strong: #6366f1;\
+        --text-main: #f9fafb;\
+        --text-muted: #9ca3af;\
+        --card: #111827;\
+        --border-subtle: rgba(156, 163, 175, 0.3);\
+        --danger: #f97373;\
+        --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);\
+        --radius-xl: 1.75rem;\
+      \}\
+\
+      * \{\
+        box-sizing: border-box;\
+        margin: 0;\
+        padding: 0;\
+      \}\
+\
+      body \{\
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;\
+        background: radial-gradient(circle at top, #111827 0, #020617 42%, #000 100%);\
+        color: var(--text-main);\
+        min-height: 100vh;\
+        line-height: 1.6;\
+      \}\
+\
+      a \{\
+        color: inherit;\
+        text-decoration: none;\
+      \}\
+\
+      .page \{\
+        max-width: 1100px;\
+        margin: 0 auto;\
+        padding: 1.5rem 1.25rem 3rem;\
+      \}\
+\
+      header \{\
+        position: sticky;\
+        top: 0;\
+        z-index: 20;\
+        backdrop-filter: blur(24px);\
+        background: linear-gradient(to bottom, rgba(5, 7, 12, 0.96), rgba(5, 7, 12, 0.6));\
+        border-bottom: 1px solid rgba(55, 65, 81, 0.6);\
+      \}\
+\
+      .nav \{\
+        max-width: 1100px;\
+        margin: 0 auto;\
+        padding: 0.75rem 1.25rem;\
+        display: flex;\
+        align-items: center;\
+        justify-content: space-between;\
+        gap: 1rem;\
+      \}\
+\
+      .brand \{\
+        display: flex;\
+        align-items: center;\
+        gap: 0.75rem;\
+      \}\
+\
+      .brand-logo \{\
+        width: 32px;\
+        height: 32px;\
+        border-radius: 999px;\
+        background: conic-gradient(from 210deg, #22d3ee, #4f46e5, #a855f7, #22d3ee);\
+        display: flex;\
+        align-items: center;\
+        justify-content: center;\
+        box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.7);\
+        font-size: 0.9rem;\
+        font-weight: 800;\
+        letter-spacing: 0.05em;\
+      \}\
+\
+      .brand-text \{\
+        display: flex;\
+        flex-direction: column;\
+      \}\
+\
+      .brand-line1 \{\
+        font-weight: 700;\
+        letter-spacing: 0.09em;\
+        text-transform: uppercase;\
+        font-size: 0.85rem;\
+      \}\
+\
+      .brand-line2 \{\
+        font-size: 0.75rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      .nav-links \{\
+        display: flex;\
+        align-items: center;\
+        gap: 1.75rem;\
+        font-size: 0.9rem;\
+      \}\
+\
+      .nav-links a \{\
+        color: var(--text-muted);\
+        position: relative;\
+      \}\
+\
+      .nav-links a::after \{\
+        content: "";\
+        position: absolute;\
+        left: 0;\
+        right: 0;\
+        bottom: -0.3rem;\
+        height: 2px;\
+        border-radius: 999px;\
+        background: linear-gradient(to right, #22c55e, #4f46e5);\
+        transform: scaleX(0);\
+        transform-origin: center;\
+        transition: transform 0.2s ease-out;\
+      \}\
+\
+      .nav-links a:hover \{\
+        color: var(--text-main);\
+      \}\
+\
+      .nav-links a:hover::after \{\
+        transform: scaleX(1);\
+      \}\
+\
+      .nav-cta \{\
+        padding: 0.55rem 1rem;\
+        border-radius: 999px;\
+        border: 1px solid rgba(79, 70, 229, 0.4);\
+        background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.3), rgba(15, 23, 42, 0.96));\
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);\
+        font-size: 0.8rem;\
+        text-transform: uppercase;\
+        letter-spacing: 0.14em;\
+      \}\
+\
+      .nav-cta span \{\
+        font-size: 0.95rem;\
+      \}\
+\
+      .nav-toggle \{\
+        display: none;\
+        border: none;\
+        background: transparent;\
+        color: var(--text-main);\
+        cursor: pointer;\
+      \}\
+\
+      .nav-toggle svg \{\
+        width: 26px;\
+        height: 26px;\
+      \}\
+\
+      main \{\
+        margin-top: 1.5rem;\
+      \}\
+\
+      .hero \{\
+        display: grid;\
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);\
+        gap: 2.5rem;\
+        align-items: center;\
+      \}\
+\
+      .hero-copy \{\
+        position: relative;\
+      \}\
+\
+      .hero-pill \{\
+        display: inline-flex;\
+        align-items: center;\
+        gap: 0.5rem;\
+        border-radius: 999px;\
+        border: 1px solid rgba(148, 163, 184, 0.6);\
+        padding: 0.35rem 0.85rem 0.35rem 0.3rem;\
+        margin-bottom: 1.1rem;\
+        background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.35), rgba(15, 23, 42, 0.96));\
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);\
+        font-size: 0.8rem;\
+      \}\
+\
+      .dot \{\
+        width: 20px;\
+        height: 20px;\
+        border-radius: 999px;\
+        background: radial-gradient(circle at 30% 20%, #e5e7eb, #22c55e, #22d3ee);\
+        box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.9);\
+      \}\
+\
+      .hero-pill strong \{\
+        font-weight: 600;\
+      \}\
+\
+      .hero-heading \{\
+        font-size: clamp(2.2rem, 5vw, 3rem);\
+        font-weight: 800;\
+        letter-spacing: -0.03em;\
+        margin-bottom: 0.75rem;\
+      \}\
+\
+      .hero-heading span \{\
+        background: linear-gradient(120deg, #22c55e, #22d3ee, #6366f1);\
+        -webkit-background-clip: text;\
+        background-clip: text;\
+        color: transparent;\
+      \}\
+\
+      .hero-subheading \{\
+        font-size: 0.98rem;\
+        color: var(--text-muted);\
+        max-width: 32rem;\
+        margin-bottom: 1.4rem;\
+      \}\
+\
+      .hero-meta \{\
+        font-size: 0.85rem;\
+        color: var(--text-muted);\
+        margin-bottom: 1.7rem;\
+      \}\
+\
+      .hero-meta span \{\
+        color: #bbf7d0;\
+      \}\
+\
+      .hero-actions \{\
+        display: flex;\
+        flex-wrap: wrap;\
+        gap: 0.9rem;\
+        margin-bottom: 1.9rem;\
+      \}\
+\
+      .btn-primary,\
+      .btn-ghost \{\
+        border-radius: 999px;\
+        padding: 0.8rem 1.3rem;\
+        font-size: 0.9rem;\
+        font-weight: 600;\
+        border: none;\
+        cursor: pointer;\
+        display: inline-flex;\
+        align-items: center;\
+        gap: 0.55rem;\
+        text-decoration: none;\
+        transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out, border-color 0.12s ease-out;\
+      \}\
+\
+      .btn-primary \{\
+        background: radial-gradient(circle at top left, #22c55e, #4f46e5);\
+        box-shadow: 0 18px 40px rgba(22, 163, 74, 0.5);\
+        color: #f9fafb;\
+      \}\
+\
+      .btn-primary:hover \{\
+        transform: translateY(-1px);\
+        box-shadow: 0 24px 55px rgba(30, 64, 175, 0.85);\
+      \}\
+\
+      .btn-ghost \{\
+        border: 1px solid rgba(148, 163, 184, 0.7);\
+        background: rgba(15, 23, 42, 0.85);\
+        color: var(--text-main);\
+      \}\
+\
+      .btn-ghost:hover \{\
+        background: rgba(15, 23, 42, 1);\
+        border-color: rgba(209, 213, 219, 0.8);\
+        transform: translateY(-1px);\
+      \}\
+\
+      .btn-primary svg,\
+      .btn-ghost svg \{\
+        width: 16px;\
+        height: 16px;\
+      \}\
+\
+      .hero-glance \{\
+        display: flex;\
+        flex-wrap: wrap;\
+        gap: 1.25rem;\
+        font-size: 0.8rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      .hero-glance strong \{\
+        font-size: 1.1rem;\
+        color: #e5e7eb;\
+        display: block;\
+      \}\
+\
+      .hero-card \{\
+        border-radius: var(--radius-xl);\
+        background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), rgba(15, 23, 42, 0.96));\
+        border: 1px solid rgba(55, 65, 81, 0.7);\
+        padding: 1.3rem 1.4rem;\
+        box-shadow: var(--shadow-soft);\
+        position: relative;\
+        overflow: hidden;\
+      \}\
+\
+      .hero-card::before \{\
+        content: "";\
+        position: absolute;\
+        inset: -40%;\
+        background: radial-gradient(circle at top, rgba(37, 99, 235, 0.15), transparent 55%);\
+        opacity: 0.9;\
+        pointer-events: none;\
+      \}\
+\
+      .hero-card-inner \{\
+        position: relative;\
+        z-index: 1;\
+      \}\
+\
+      .hero-card-tag \{\
+        font-size: 0.7rem;\
+        text-transform: uppercase;\
+        letter-spacing: 0.15em;\
+        color: #bfdbfe;\
+        margin-bottom: 0.4rem;\
+      \}\
+\
+      .hero-card-title \{\
+        font-size: 1.05rem;\
+        font-weight: 700;\
+        margin-bottom: 0.8rem;\
+      \}\
+\
+      .hero-card-grid \{\
+        display: grid;\
+        grid-template-columns: repeat(2, minmax(0, 1fr));\
+        gap: 0.75rem 1rem;\
+        margin-bottom: 1.1rem;\
+        font-size: 0.8rem;\
+      \}\
+\
+      .chip \{\
+        border-radius: 999px;\
+        padding: 0.2rem 0.6rem;\
+        background: rgba(15, 23, 42, 0.8);\
+        border: 1px solid rgba(148, 163, 184, 0.6);\
+        display: inline-flex;\
+        align-items: center;\
+        gap: 0.3rem;\
+        font-size: 0.75rem;\
+      \}\
+\
+      .chip-dot \{\
+        width: 6px;\
+        height: 6px;\
+        border-radius: 999px;\
+        background: #4ade80;\
+      \}\
+\
+      .hero-card-footer \{\
+        display: flex;\
+        justify-content: space-between;\
+        align-items: center;\
+        font-size: 0.78rem;\
+        color: #e5e7eb;\
+      \}\
+\
+      .hero-card-footer span \{\
+        color: #bbf7d0;\
+      \}\
+\
+      .badge-row \{\
+        display: flex;\
+        flex-wrap: wrap;\
+        gap: 0.5rem;\
+        margin-top: 0.75rem;\
+      \}\
+\
+      .badge-row .chip \{\
+        background: rgba(15, 23, 42, 0.9);\
+      \}\
+\
+      .section \{\
+        margin-top: 3rem;\
+      \}\
+\
+      .section-header \{\
+        display: flex;\
+        justify-content: space-between;\
+        align-items: baseline;\
+        gap: 1rem;\
+        margin-bottom: 1.4rem;\
+      \}\
+\
+      .section-kicker \{\
+        font-size: 0.75rem;\
+        text-transform: uppercase;\
+        letter-spacing: 0.15em;\
+        color: #a5b4fc;\
+      \}\
+\
+      .section-title \{\
+        font-size: 1.2rem;\
+        font-weight: 700;\
+      \}\
+\
+      .section-subtitle \{\
+        font-size: 0.9rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      .about-grid \{\
+        display: grid;\
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);\
+        gap: 1.75rem;\
+      \}\
+\
+      .about-text \{\
+        font-size: 0.93rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      .about-text p + p \{\
+        margin-top: 0.75rem;\
+      \}\
+\
+      .about-points \{\
+        list-style: none;\
+        margin-top: 0.9rem;\
+        display: grid;\
+        gap: 0.55rem;\
+      \}\
+\
+      .about-points li \{\
+        display: flex;\
+        gap: 0.4rem;\
+        align-items: flex-start;\
+      \}\
+\
+      .about-points span \{\
+        margin-top: 0.15rem;\
+        font-size: 0.7rem;\
+      \}\
+\
+      .about-stats \{\
+        display: grid;\
+        grid-template-columns: repeat(2, minmax(0, 1fr));\
+        gap: 0.75rem;\
+      \}\
+\
+      .stat-card \{\
+        border-radius: 1.1rem;\
+        padding: 0.9rem 1rem;\
+        background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), rgba(15, 23, 42, 0.96));\
+        border: 1px solid rgba(55, 65, 81, 0.7);\
+        font-size: 0.8rem;\
+      \}\
+\
+      .stat-number \{\
+        font-weight: 700;\
+        font-size: 1.3rem;\
+      \}\
+\
+      .stat-label \{\
+        color: var(--text-muted);\
+      \}\
+\
+      .stat-note \{\
+        margin-top: 0.4rem;\
+        font-size: 0.72rem;\
+        color: #e5e7eb;\
+      \}\
+\
+      .subjects-grid \{\
+        display: grid;\
+        grid-template-columns: repeat(3, minmax(0, 1fr));\
+        gap: 1rem;\
+      \}\
+\
+      .subject-card \{\
+        border-radius: 1.1rem;\
+        padding: 0.95rem 1rem;\
+        background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.16), rgba(15, 23, 42, 0.96));\
+        border: 1px solid rgba(55, 65, 81, 0.75);\
+        box-shadow: 0 16px 35px rgba(15, 23, 42, 0.85);\
+        font-size: 0.85rem;\
+      \}\
+\
+      .subject-name \{\
+        font-weight: 600;\
+        margin-bottom: 0.25rem;\
+      \}\
+\
+      .subject-tag \{\
+        font-size: 0.7rem;\
+        text-transform: uppercase;\
+        letter-spacing: 0.12em;\
+        color: #a5b4fc;\
+        margin-bottom: 0.3rem;\
+      \}\
+\
+      .subject-note \{\
+        font-size: 0.78rem;\
+        color: var(--text-muted);\
+        margin-top: 0.4rem;\
+      \}\
+\
+      .why-grid \{\
+        display: grid;\
+        grid-template-columns: repeat(4, minmax(0, 1fr));\
+        gap: 1rem;\
+      \}\
+\
+      .why-card \{\
+        border-radius: 1.1rem;\
+        padding: 0.9rem 1rem;\
+        background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.18), rgba(15, 23, 42, 0.96));\
+        border: 1px solid rgba(55, 65, 81, 0.7);\
+        font-size: 0.82rem;\
+      \}\
+\
+      .why-title \{\
+        font-weight: 600;\
+        margin-bottom: 0.3rem;\
+      \}\
+\
+      .why-chip \{\
+        display: inline-flex;\
+        align-items: center;\
+        gap: 0.25rem;\
+        font-size: 0.72rem;\
+        margin-bottom: 0.4rem;\
+        color: #bbf7d0;\
+      \}\
+\
+      .why-chip span \{\
+        width: 7px;\
+        height: 7px;\
+        border-radius: 999px;\
+        background: #22c55e;\
+      \}\
+\
+      .testimonials \{\
+        display: grid;\
+        grid-template-columns: repeat(2, minmax(0, 1fr));\
+        gap: 1rem;\
+        font-size: 0.82rem;\
+      \}\
+\
+      .testimonial-card \{\
+        border-radius: 1.1rem;\
+        padding: 1rem 1.1rem;\
+        background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), rgba(15, 23, 42, 0.96));\
+        border: 1px solid rgba(55, 65, 81, 0.75);\
+      \}\
+\
+      .testimonial-text \{\
+        font-style: italic;\
+        color: var(--text-muted);\
+      \}\
+\
+      .testimonial-meta \{\
+        margin-top: 0.7rem;\
+        font-size: 0.78rem;\
+        color: #e5e7eb;\
+      \}\
+\
+      .testimonial-meta span \{\
+        display: block;\
+        color: var(--text-muted);\
+      \}\
+\
+      .contact-grid \{\
+        display: grid;\
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);\
+        gap: 1.7rem;\
+      \}\
+\
+      .contact-form \{\
+        border-radius: var(--radius-xl);\
+        padding: 1.3rem 1.4rem;\
+        background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.2), rgba(15, 23, 42, 0.98));\
+        border: 1px solid rgba(55, 65, 81, 0.9);\
+        box-shadow: var(--shadow-soft);\
+        font-size: 0.82rem;\
+      \}\
+\
+      .contact-form-row \{\
+        display: grid;\
+        grid-template-columns: repeat(2, minmax(0, 1fr));\
+        gap: 0.75rem;\
+      \}\
+\
+      .field \{\
+        display: flex;\
+        flex-direction: column;\
+        gap: 0.3rem;\
+        margin-bottom: 0.8rem;\
+      \}\
+\
+      .field label \{\
+        font-size: 0.78rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      .field input,\
+      .field select,\
+      .field textarea \{\
+        border-radius: 0.7rem;\
+        border: 1px solid rgba(75, 85, 99, 0.9);\
+        background: rgba(15, 23, 42, 0.9);\
+        padding: 0.55rem 0.7rem;\
+        color: var(--text-main);\
+        font-size: 0.8rem;\
+        outline: none;\
+        transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out;\
+      \}\
+\
+      .field input::placeholder,\
+      .field textarea::placeholder \{\
+        color: rgba(148, 163, 184, 0.8);\
+      \}\
+\
+      .field input:focus,\
+      .field select:focus,\
+      .field textarea:focus \{\
+        border-color: #4f46e5;\
+        box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.7);\
+        background: rgba(15, 23, 42, 0.96);\
+      \}\
+\
+      .field small \{\
+        font-size: 0.7rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      textarea \{\
+        min-height: 80px;\
+        resize: vertical;\
+      \}\
+\
+      .contact-note \{\
+        font-size: 0.8rem;\
+        color: var(--text-muted);\
+        margin-bottom: 0.85rem;\
+      \}\
+\
+      .contact-aside \{\
+        font-size: 0.85rem;\
+        color: var(--text-muted);\
+      \}\
+\
+      .contact-aside-card \{\
+        border-radius: 1.2rem;\
+        padding: 0.9rem 1rem;\
+        background: radial-gradient(circle at top left, rgba(22, 163, 74, 0.2), rgba(15, 23, 42, 0.98));\
+        border: 1px solid rgba(55, 65, 81, 0.9);\
+        margin-top: 0.8rem;\
+        font-size: 0.8rem;\
+      \}\
+\
+      .contact-list \{\
+        list-style: none;\
+        margin-top: 0.55rem;\
+        display: grid;\
+        gap: 0.4rem;\
+      \}\
+\
+      .contact-list span \{\
+        font-size: 0.78rem;\
+        color: #e5e7eb;\
+      \}\
+\
+      .contact-badge \{\
+        display: inline-flex;\
+        align-items: center;\
+        gap: 0.3rem;\
+        font-size: 0.7rem;\
+        padding: 0.2rem 0.55rem;\
+        border-radius: 999px;\
+        background: rgba(15, 23, 42, 0.9);\
+        border: 1px solid rgba(148, 163, 184, 0.7);\
+        margin-top: 0.6rem;\
+      \}\
+\
+      .contact-badge span \{\
+        width: 6px;\
+        height: 6px;\
+        border-radius: 999px;\
+        background: #22c55e;\
+      \}\
+\
+      footer \{\
+        margin-top: 3rem;\
+        padding-top: 1.5rem;\
+        border-top: 1px solid rgba(31, 41, 55, 0.9);\
+        font-size: 0.78rem;\
+        color: var(--text-muted);\
+        display: flex;\
+        justify-content: space-between;\
+        flex-wrap: wrap;\
+        gap: 0.75rem;\
+      \}\
+\
+      footer strong \{\
+        color: #e5e7eb;\
+      \}\
+\
+      .footer-links \{\
+        display: flex;\
+        gap: 1rem;\
+      \}\
+\
+      .footer-links a \{\
+        font-size: 0.78rem;\
+      \}\
+\
+      .footer-links a:hover \{\
+        color: #e5e7eb;\
+      \}\
+\
+      .success-message \{\
+        display: none;\
+        margin-top: 0.75rem;\
+        font-size: 0.78rem;\
+        color: #bbf7d0;\
+      \}\
+\
+      .success-message.visible \{\
+        display: block;\
+      \}\
+\
+      .whatsapp-button \{\
+        position: fixed;\
+        right: 1.3rem;\
+        bottom: 1.3rem;\
+        width: 52px;\
+        height: 52px;\
+        border-radius: 999px;\
+        display: flex;\
+        align-items: center;\
+        justify-content: center;\
+        background: radial-gradient(circle at top left, #22c55e, #16a34a);\
+        box-shadow: 0 18px 35px rgba(21, 128, 61, 0.7);\
+        color: #ecfdf5;\
+        text-decoration: none;\
+        border: none;\
+        cursor: pointer;\
+        z-index: 40;\
+      \}\
+\
+      .whatsapp-button svg \{\
+        width: 26px;\
+        height: 26px;\
+      \}\
+\
+      .whatsapp-button:hover \{\
+        transform: translateY(-1px);\
+        box-shadow: 0 22px 45px rgba(21, 128, 61, 0.8);\
+      \}\
+\
+      @media (max-width: 900px) \{\
+        .hero,\
+        .about-grid,\
+        .contact-grid \{\
+          grid-template-columns: minmax(0, 1fr);\
+        \}\
+\
+        .hero \{\
+          gap: 2rem;\
+        \}\
+\
+        .hero-card \{\
+          order: -1;\
+        \}\
+      \}\
+\
+      @media (max-width: 780px) \{\
+        .nav-links \{\
+          position: absolute;\
+          inset: 55px 1.25rem auto 1.25rem;\
+          border-radius: 1rem;\
+          padding: 0.85rem 1rem;\
+          background: rgba(15, 23, 42, 0.97);\
+          border: 1px solid rgba(55, 65, 81, 0.9);\
+          flex-direction: column;\
+          align-items: flex-start;\
+          gap: 0.75rem;\
+          transform-origin: top;\
+          transform: scaleY(0.6);\
+          opacity: 0;\
+          pointer-events: none;\
+          transition: transform 0.16s ease-out, opacity 0.16s ease-out;\
+        \}\
+\
+        .nav-links.open \{\
+          opacity: 1;\
+          pointer-events: auto;\
+          transform: scaleY(1);\
+        \}\
+\
+        .nav-cta \{\
+          align-self: stretch;\
+          text-align: center;\
+          justify-content: center;\
+        \}\
+\
+        .nav-toggle \{\
+          display: inline-flex;\
+        \}\
+\
+        .subjects-grid \{\
+          grid-template-columns: repeat(2, minmax(0, 1fr));\
+        \}\
+\
+        .why-grid,\
+        .testimonials \{\
+          grid-template-columns: minmax(0, 1fr);\
+        \}\
+      \}\
+\
+      @media (max-width: 540px) \{\
+        .page \{\
+          padding-inline: 1rem;\
+        \}\
+\
+        .subjects-grid \{\
+          grid-template-columns: minmax(0, 1fr);\
+        \}\
+\
+        .about-stats \{\
+          grid-template-columns: minmax(0, 1fr);\
+        \}\
+\
+        .contact-form-row \{\
+          grid-template-columns: minmax(0, 1fr);\
+        \}\
+      \}\
+    </style>\
+  </head>\
+  <body>\
+    <header>\
+      <nav class="nav">\
+        <div class="brand">\
+          <div class="brand-logo">OYS</div>\
+          <div class="brand-text">\
+            <div class="brand-line1">OYS Tutor</div>\
+            <div class="brand-line2">At Your Service for Learning</div>\
+          </div>\
+        </div>\
+\
+        <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">\
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+            <path d="M4 6h16M4 12h16M4 18h16" />\
+          </svg>\
+        </button>\
+\
+        <div class="nav-links" id="navLinks">\
+          <a href="#about">About</a>\
+          <a href="#subjects">Subjects</a>\
+          <a href="#pricing">Pricing</a>\
+          <a href="#why">Why OYS</a>\
+          <a href="#contact">Contact</a>\
+          <button class="nav-cta" onclick="scrollToId('contact')">\
+            Free Demo Class\
+          </button>\
+        </div>\
+      </nav>\
+    </header>\
+\
+    <div class="page">\
+      <main>\
+        <section class="hero" id="top">\
+          <div class="hero-copy">\
+            <div class="hero-pill">\
+              <div class="dot"></div>\
+              <span><strong>OYS Tutor</strong> &mdash; On Your Service, Every Session.</span>\
+            </div>\
+            <h1 class="hero-heading">\
+              Personalised tutoring <span>At Your Service</span> for every student.\
+            </h1>\
+            <p class="hero-subheading">\
+              1:1 and small-group online tuitions for school students, exam aspirants, and\
+              early coders. OYS Tutor keeps learning simple, focused, and stress\uc0\u8209 free.\
+            </p>\
+            <p class="hero-meta">\
+              Now accepting students for <span>Maths, Science, English & Coding</span>.\
+            </p>\
+\
+            <div class="hero-actions">\
+              <a href="#contact" class="btn-primary">\
+                <span>Book a Free Demo</span>\
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+                  <path d="M5 12h14" />\
+                  <path d="M13 5l7 7-7 7" />\
+                </svg>\
+              </a>\
+              <a href="#subjects" class="btn-ghost">\
+                <span>View Subjects</span>\
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+                  <circle cx="12" cy="12" r="3" />\
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l0 0a2 2 0 1 1-2.83 2.83l0 0A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 .6 1.65 1.65 0 0 0-.33 1.82l0 0a2 2 0 1 1-3.32 0l0 0A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l0 0a2 2 0 1 1-2.83-2.83l0 0A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-.6-1 1.65 1.65 0 0 0-1.82-.33l0 0a2 2 0 1 1 0-3.32l0 0A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l0 0a2 2 0 1 1 2.83-2.83l0 0A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-.6 1.65 1.65 0 0 0 .33-1.82l0 0a2 2 0 1 1 3.32 0l0 0A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33l0 0a2 2 0 1 1 2.83 2.83l0 0A1.65 1.65 0 0 0 19.4 9c.37.3.6.76.6 1.25s-.23.95-.6 1.25Z" />\
+                </svg>\
+              </a>\
+            </div>\
+\
+            <div class="hero-glance">\
+              <div>\
+                <strong>1:1 Focus</strong>\
+                Personalised plans for every learner.\
+              </div>\
+              <div>\
+                <strong>Flexible Timings</strong>\
+                Early morning & evening slots.\
+              </div>\
+              <div>\
+                <strong>Parent Updates</strong>\
+                Progress shared after each session.\
+              </div>\
+            </div>\
+          </div>\
+\
+          <aside class="hero-card" aria-label="OYS Tutor quick facts">\
+            <div class="hero-card-inner">\
+              <div class="hero-card-tag">Snapshot</div>\
+              <div class="hero-card-title">Your tutor, on your schedule.</div>\
+              <div class="hero-card-grid">\
+                <div>\
+                  <div class="chip"><span class="chip-dot"></span> Classes 4\'9612</div>\
+                </div>\
+                <div>\
+                  <div class="chip"><span class="chip-dot"></span> Boards: CBSE, ICSE, State</div>\
+                </div>\
+                <div>\
+                  <div class="chip"><span class="chip-dot"></span> 1:1 or small group</div>\
+                </div>\
+                <div>\
+                  <div class="chip"><span class="chip-dot"></span> Online live sessions</div>\
+                </div>\
+              </div>\
+              <div class="hero-card-footer">\
+                <div>\
+                  Typical plan: <span>3 sessions / week</span>\
+                </div>\
+                <div>\
+                  Avg. improvement: <span>4\'9612 weeks</span>\
+                </div>\
+              </div>\
+              <div class="badge-row">\
+                <div class="chip">Homework support</div>\
+                <div class="chip">Exam strategy</div>\
+                <div class="chip">Concept clarity first</div>\
+              </div>\
+            </div>\
+          </aside>\
+        </section>\
+\
+        <section class="section" id="tutor">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">Meet your tutor</div>\
+              <h2 class="section-title">A mentor that stays on your side.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              OYS Tutor (On Your Service Tutor) is designed to feel like a friendly, reliable teacher who understands school pressure, parent expectations, and real exam patterns.\
+            </p>\
+          </div>\
+\
+          <div class="about-grid">\
+            <div class="about-text">\
+              <p>\
+                Sessions are calm, structured and practical. Instead of rushing through chapters, we slow down for important ideas, solve questions together, and then give smart homework &mdash; not just more homework.\
+              </p>\
+              <p>\
+                Students are encouraged to ask even the smallest doubt. Many of them start by saying "I'm weak in this subject" and end up saying "This is actually easy" once concepts click.\
+              </p>\
+            </div>\
+            <div class="about-stats">\
+              <div class="stat-card">\
+                <div class="stat-number">1:1</div>\
+                <div class="stat-label">Student attention</div>\
+                <p class="stat-note">Focus on how your child learns, not on finishing a big batch.</p>\
+              </div>\
+              <div class="stat-card">\
+                <div class="stat-number">Plan</div>\
+                <div class="stat-label">for every student</div>\
+                <p class="stat-note">Custom chapter plan built around school syllabus and upcoming exams.</p>\
+              </div>\
+            </div>\
+          </div>\
+        </section>\
+\
+        <section class="section" id="about">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">About OYS Tutor</div>\
+              <h2 class="section-title">On Your Service, in every chapter and concept.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              OYS (On Your Service) Tutor is built around one simple idea: when students get\
+              patient guidance at the right time, confidence and marks both go up.\
+            </p>\
+          </div>\
+\
+          <div class="about-grid">\
+            <div class="about-text">\
+              <p>\
+                We combine clear explanations, live problem solving, and regular revision so\
+                that each student understands concepts instead of just memorising answers.\
+              </p>\
+              <p>\
+                Parents stay updated after every class, and students get simple action points\
+                for the next week.\
+              </p>\
+              <ul class="about-points">\
+                <li>\
+                  <span>\uc0\u10004 </span>\
+                  <div>\
+                    Personalised lesson plans based on your school syllabus and upcoming exams.\
+                  </div>\
+                </li>\
+                <li>\
+                  <span>\uc0\u10004 </span>\
+                  <div>\
+                    Concept\uc0\u8209 first teaching: examples, visuals, and practice questions in every session.\
+                  </div>\
+                </li>\
+                <li>\
+                  <span>\uc0\u10004 </span>\
+                  <div>\
+                    Calm, student\uc0\u8209 friendly environment where doubts are always welcome.\
+                  </div>\
+                </li>\
+              </ul>\
+            </div>\
+\
+            <div class="about-stats">\
+              <div class="stat-card">\
+                <div class="stat-number">3&times;</div>\
+                <div class="stat-label">Faster doubt resolution</div>\
+                <p class="stat-note">Students ask questions freely in 1:1 and small groups.</p>\
+              </div>\
+              <div class="stat-card">\
+                <div class="stat-number">8&ndash;10</div>\
+                <div class="stat-label">Weeks to visible progress</div>\
+                <p class="stat-note">With consistent classes and homework tracking.</p>\
+              </div>\
+            </div>\
+          </div>\
+        </section>\
+\
+        <section class="section" id="subjects">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">Subjects</div>\
+              <h2 class="section-title">Choose the help you need today.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              Mix and match subjects in a single plan. Start with one, add more later as needed.\
+            </p>\
+          </div>\
+\
+          <div class="subjects-grid">\
+            <article class="subject-card">\
+              <div class="subject-tag">Core</div>\
+              <h3 class="subject-name">Mathematics</h3>\
+              <p>\
+                Arithmetic, Algebra, Geometry, Trigonometry, and exam\uc0\u8209 oriented practice papers.\
+              </p>\
+              <p class="subject-note">Ideal for students who feel they are "weak in maths" and want to rebuild confidence.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">Core</div>\
+              <h3 class="subject-name">Science</h3>\
+              <p>\
+                Physics, Chemistry, Biology with real\uc0\u8209 life examples, diagrams, and numerical practice.\
+              </p>\
+              <p class="subject-note">Perfect for board exam prep and concept clarity from middle school onwards.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">Language</div>\
+              <h3 class="subject-name">English</h3>\
+              <p>\
+                Grammar, comprehension, writing skills, and spoken English for school & competitive exams.\
+              </p>\
+              <p class="subject-note">Improve both exam writing and day\uc0\u8209 to\u8209 day communication.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">Future Skills</div>\
+              <h3 class="subject-name">Coding Basics</h3>\
+              <p>\
+                Logic building, Scratch / block coding, and an introduction to Python or web basics.\
+              </p>\
+              <p class="subject-note">Great for early exposure to programming in a fun, simple way.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">Exams</div>\
+              <h3 class="subject-name">Exam Strategy & Revision</h3>\
+              <p>\
+                Custom revision timetables, mock tests, and paper\uc0\u8209 wise analysis for upcoming exams.\
+              </p>\
+              <p class="subject-note">Use this track just before unit tests, half\uc0\u8209 yearly, or boards.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">Support</div>\
+              <h3 class="subject-name">Homework & Doubt Clinic</h3>\
+              <p>\
+                Flexible slot where students bring their own questions from school or self\uc0\u8209 study.\
+              </p>\
+              <p class="subject-note">Helps remove backlog and keeps daily studies light.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+            <div class="subject-tag">Home</div>\
+            <h3 class="subject-name">Home Tutoring (In\uc0\u8209 Person)</h3>\
+            <p>\
+              One\uc0\u8209 to\u8209 one classes at your home for core subjects, currently available in select areas of Bangalore.\
+            </p>\
+            <p class="subject-note">Best for students who learn better face\uc0\u8209 to\u8209 face in their own environment and prefer an in\u8209 person mentor.</p>\
+          </article>\
+          </div>\
+        </section>\
+\
+        <section class="section" id="pricing">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">Fees</div>\
+              <h2 class="section-title">Simple, transparent pricing.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              Pay only for the hours you use. Fees are settled on a daily basis after each session.\
+            </p>\
+          </div>\
+\
+          <div class="subjects-grid">\
+            <article class="subject-card">\
+              <div class="subject-tag">Online</div>\
+              <h3 class="subject-name">Online Classes</h3>\
+              <p>\
+                Live 1:1 or small\uc0\u8209 group sessions on video call with shared screen explanations and digital notes.\
+              </p>\
+              <p class="subject-note"><strong>\uc0\u8377 150 per hour</strong> &mdash; pay at the end of each day for completed sessions.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">Home</div>\
+              <h3 class="subject-name">Home Tutoring (Bangalore HQ)</h3>\
+              <p>\
+                In\uc0\u8209 person classes at your home, subject to tutor availability in your area in and around Bangalore.\
+              </p>\
+              <p class="subject-note"><strong>\uc0\u8377 450 per hour</strong> &mdash; payment is done daily after class.</p>\
+            </article>\
+\
+            <article class="subject-card">\
+              <div class="subject-tag">How it works</div>\
+              <h3 class="subject-name">Payments & Scheduling</h3>\
+              <p>\
+                You choose the days and approximate time slot. We confirm the schedule weekly and share a simple summary.\
+              </p>\
+              <p class="subject-note">Payments can be made via UPI / bank transfer / cash, as mutually decided, at the end of each teaching day.</p>\
+            </article>\
+          </div>\
+        </section>\
+\
+        <section class="section" id="why">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">Why OYS Tutor</div>\
+              <h2 class="section-title">Teaching that fits your child, not the other way round.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              We keep batch sizes small, schedules flexible, and communication open with parents.\
+            </p>\
+          </div>\
+\
+          <div class="why-grid">\
+            <article class="why-card">\
+              <div class="why-chip"><span></span> 100% Live</div>\
+              <h3 class="why-title">Real\uc0\u8209 time classes</h3>\
+              <p>\
+                No pre\uc0\u8209 recorded videos. Students can pause the class, ask doubts, and solve along with the tutor.\
+              </p>\
+            </article>\
+\
+            <article class="why-card">\
+              <div class="why-chip"><span></span> Parent\uc0\u8209 Friendly</div>\
+              <h3 class="why-title">Regular updates</h3>\
+              <p>\
+                Quick summary after sessions: topics covered, homework given, and upcoming plan for the week.\
+              </p>\
+            </article>\
+\
+            <article class="why-card">\
+              <div class="why-chip"><span></span> Flexible</div>\
+              <h3 class="why-title">Slots that suit you</h3>\
+              <p>\
+                Morning before school or evening after. We try to match timings with your family routine.\
+              </p>\
+            </article>\
+\
+            <article class="why-card">\
+              <div class="why-chip"><span></span> Goal\uc0\u8209 Driven</div>\
+              <h3 class="why-title">Marks + confidence</h3>\
+              <p>\
+                Focus on both result and mindset so students feel calmer and more prepared in exams.\
+              </p>\
+            </article>\
+          </div>\
+        </section>\
+\
+        <section class="section" id="stories">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">Stories</div>\
+              <h2 class="section-title">Parents and students about OYS Tutor.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              These are sample testimonials. You can replace them with real feedback later.\
+            </p>\
+          </div>\
+\
+          <div class="testimonials">\
+            <article class="testimonial-card">\
+              <p class="testimonial-text">\
+                "My daughter used to avoid maths homework. After 2 months with OYS Tutor, she\
+                finishes her work on time and even explains concepts back to us."\
+              </p>\
+              <div class="testimonial-meta">\
+                Parent of Grade 7 student\
+                <span>Maths & Science plan</span>\
+              </div>\
+            </article>\
+\
+            <article class="testimonial-card">\
+              <p class="testimonial-text">\
+                "The weekly update messages are very useful. I know exactly what my son is\
+                studying and where he needs more practice before the exams."\
+              </p>\
+              <div class="testimonial-meta">\
+                Parent of Grade 10 student\
+                <span>Board exam package</span>\
+              </div>\
+            </article>\
+          </div>\
+        </section>\
+\
+        <section class="section" id="contact">\
+          <div class="section-header">\
+            <div>\
+              <div class="section-kicker">Get started</div>\
+              <h2 class="section-title">Book a free trial class with OYS Tutor.</h2>\
+            </div>\
+            <p class="section-subtitle">\
+              Share a few details and we\'92ll connect with you to fix a time, discuss fees, and\
+              finalise the plan.\
+            </p>\
+          </div>\
+\
+          <div class="contact-grid">\
+            <form class="contact-form" id="contactForm">\
+              <p class="contact-note">\
+                This is a front\uc0\u8209 end demo form. You can connect it later to WhatsApp, email, or a Google Sheet.\
+              </p>\
+\
+              <div class="contact-form-row">\
+                <div class="field">\
+                  <label for="parentName">Parent / Guardian Name</label>\
+                  <input id="parentName" name="parentName" type="text" placeholder="Enter your name" required />\
+                </div>\
+                <div class="field">\
+                  <label for="studentName">Student Name</label>\
+                  <input id="studentName" name="studentName" type="text" placeholder="Enter student name" required />\
+                </div>\
+              </div>\
+\
+              <div class="contact-form-row">\
+                <div class="field">\
+                  <label for="phone">WhatsApp Number</label>\
+                  <input id="phone" name="phone" type="tel" placeholder="10\uc0\u8209 digit mobile number" required />\
+                </div>\
+                <div class="field">\
+                  <label for="email">Email (optional)</label>\
+                  <input id="email" name="email" type="email" placeholder="you@example.com" />\
+                </div>\
+              </div>\
+\
+              <div class="contact-form-row">\
+                <div class="field">\
+                  <label for="class">Class / Grade</label>\
+                  <select id="class" name="class" required>\
+                    <option value="">Select</option>\
+                    <option value="4-6">4 &ndash; 6</option>\
+                    <option value="7-8">7 &ndash; 8</option>\
+                    <option value="9-10">9 &ndash; 10</option>\
+                    <option value="11-12">11 &ndash; 12</option>\
+                    <option value="other">Other</option>\
+                  </select>\
+                </div>\
+                <div class="field">\
+                  <label for="subject">Main Subject</label>\
+                  <select id="subject" name="subject" required>\
+                    <option value="">Select</option>\
+                    <option value="maths">Maths</option>\
+                    <option value="science">Science</option>\
+                    <option value="english">English</option>\
+                    <option value="coding">Coding</option>\
+                    <option value="exam">Exam Strategy</option>\
+                    <option value="mixed">Mixed Plan</option>\
+                  </select>\
+                </div>\
+              </div>\
+\
+              <div class="field">\
+                <label for="timing">Preferred Timing</label>\
+                <input id="timing" name="timing" type="text" placeholder="e.g. Weekdays 7&ndash;8 PM" />\
+                <small>You can also mention specific days that work best.</small>\
+              </div>\
+\
+              <div class="field">\
+                <label for="message">Anything you want us to know?</label>\
+                <textarea id="message" name="message" placeholder="Share current challenges, upcoming exams, or goals."></textarea>\
+              </div>\
+\
+              <button type="submit" class="btn-primary">\
+                <span>Submit &amp; Request Call</span>\
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">\
+                  <path d="M5 12h14" />\
+                  <path d="M13 5l7 7-7 7" />\
+                </svg>\
+              </button>\
+\
+              <p class="success-message" id="successMessage">\
+                Thank you for reaching out! This is a demo site, so the form isn't sending data yet &mdash; but you can connect it to your preferred tool later.\
+              </p>\
+            </form>\
+\
+            <aside class="contact-aside">\
+              <p>\
+                OYS Tutor stands for <strong>On Your Service Tutor</strong> &mdash; guidance that stays\
+                by your side from the first chapter to the final exam.\
+              </p>\
+\
+              <div class="contact-aside-card">\
+                <p>\
+                  When you launch this for real, you can add your own contact details here, like:\
+                </p>\
+                <ul class="contact-list">\
+                  <li>\
+                    <strong>WhatsApp:</strong>\
+                    <span>+91-9977874305</span>\
+                  </li>\
+                  <li>\
+                    <strong>Email:</strong>\
+                    <span>onyourservice9@gmail.com</span>\
+                  </li>\
+                  <li>\
+                    <strong>City / Timezone:</strong>\
+                    <span>Bangalore, India (IST)</span>\
+                  </li>\
+                </ul>\
+\
+                <p style="margin-top:0.7rem;">\
+                  Prefer Google Form? <a href="https://forms.gle/your-google-form-id" target="_blank" rel="noopener">Click here to fill the form</a>.\
+                </p>\
+                <!-- Replace the forms.gle link above with your real Google Form URL -->\
+\
+                <div class="contact-badge">\
+                  <span></span>\
+                  Ready when you are.\
+                </div>\
+              </div>\
+            </aside>\
+          </div>\
+        </section>\
+      </main>\
+\
+      <footer>\
+        <div>\
+          &copy; <span id="year"></span> <strong>OYS Tutor</strong>. At Your Service for Learning. HQ: Bangalore | WhatsApp: +91-9977874305 | Email: onyourservice9@gmail.com\
+        </div>\
+        <div class="footer-links">\
+          <a href="#top">Back to top</a>\
+          <a href="#contact">Book demo</a>\
+        </div>\
+      </footer>\
+    </div>\
+\
+    <script>\
+      function scrollToId(id) \{\
+        const el = document.getElementById(id);\
+        if (!el) return;\
+        el.scrollIntoView(\{ behavior: "smooth", block: "start" \});\
+      \}\
+\
+      const navToggle = document.getElementById("navToggle");\
+      const navLinks = document.getElementById("navLinks");\
+\
+      navToggle.addEventListener("click", () => \{\
+        navLinks.classList.toggle("open");\
+      \});\
+\
+      navLinks.querySelectorAll("a").forEach((link) => \{\
+        link.addEventListener("click", () => \{\
+          navLinks.classList.remove("open");\
+        \});\
+      \});\
+\
+      const yearSpan = document.getElementById("year");\
+      yearSpan.textContent = new Date().getFullYear();\
+\
+      const contactForm = document.getElementById("contactForm");\
+      const successMessage = document.getElementById("successMessage");\
+\
+      contactForm.addEventListener("submit", function (e) \{\
+        e.preventDefault();\
+        successMessage.classList.add("visible");\
+        contactForm.scrollIntoView(\{ behavior: "smooth", block: "center" \});\
+      \});\
+    </script>\
+\
+    <a\
+      href="https://wa.me/919977874305?text=Hi%20OYS%20Tutor%2C%20I%20am%20interested%20in%20a%20demo%20class"\
+      class="whatsapp-button"\
+      target="_blank"\
+      rel="noopener"\
+      aria-label="Chat with OYS Tutor on WhatsApp"\
+    >\
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">\
+        <path d="M16 3C9.373 3 4 8.373 4 15c0 2.64.824 5.086 2.243 7.11L4 29l7.09-2.214A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 2c5.534 0 10 4.466 10 10s-4.466 10-10 10a9.9 9.9 0 0 1-4.84-1.283l-.346-.197-4.19 1.308 1.37-4.06-.225-.356A9.9 9.9 0 0 1 6 15C6 9.466 10.466 5 16 5Zm-3.14 4.5c-.262 0-.684.098-1.04.492-.356.394-1.365 1.332-1.365 3.25 0 1.918 1.398 3.77 1.594 4.028.197.262 2.686 4.29 6.64 5.836 3.28 1.29 3.95 1.163 4.66 1.09.71-.072 2.29-.936 2.613-1.84.324-.904.324-1.68.23-1.84-.098-.164-.36-.262-.753-.46-.394-.197-2.33-1.15-2.69-1.282-.356-.132-.616-.197-.876.197-.262.394-1.006 1.282-1.233 1.544-.228.262-.455.295-.848.098-.394-.197-1.663-.613-3.167-1.953-1.171-1.044-1.96-2.336-2.188-2.73-.228-.394-.024-.606.172-.803.176-.176.394-.46.59-.69.196-.23.262-.394.394-.656.132-.262.066-.492-.033-.69-.098-.197-.86-2.063-1.194-2.824-.295-.69-.6-.748-.861-.756Z" />\
+      </svg>\
+    </a>\
+  </body>\
+</html>\
+}
