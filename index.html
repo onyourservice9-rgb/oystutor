@@ -1,64 +1,951 @@
 <!DOCTYPE html>
-</section>
-</main>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="OYS Tutor (On Your Service Tutor) offers online tuition across India and home tutoring in Bangalore for Maths, Science, English, Coding, SST and Hindi with a calm, student-friendly approach."
+    />
+    <meta
+      name="keywords"
+      content="OYS Tutor, On Your Service Tutor, tuition in Bangalore, home tuition Bangalore, online tuition India, maths tuition, science tuition, English tuition, coding tuition, SST tuition, Hindi tuition"
+    />
+    <title>OYS Tutor | Online & Home Tuition in Bangalore | On Your Service Tutor</title>
+    <style>
+      :root {
+        --bg: #020617;
+        --card: #020617;
+        --accent: #22c55e;
+        --accent2: #38bdf8;
+        --accent3: #6366f1;
+        --text-main: #f9fafb;
+        --text-muted: #9ca3af;
+        --border-subtle: rgba(148, 163, 184, 0.35);
+      }
 
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-<footer>
-<div>
-&copy; <span id="year"></span> <strong>OYS Tutor</strong>. HQ: Bangalore &mdash; Online &amp; Home Tuition.
-</div>
-<div class="footer-links">
-<a href="#top">Back to top</a>
-<a href="#contact">Free demo</a>
-</div>
-</footer>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #0b1120 0, #020617 38%, #000 100%);
+        color: var(--text-main);
+        min-height: 100vh;
+      }
 
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-<a
-href="https://wa.me/919977874305?text=Hi%20OYS%20Tutor%2C%20I%20am%20interested%20in%20a%20demo%20class"
-class="whatsapp-button"
-target="_blank"
-rel="noopener"
-aria-label="Chat with OYS Tutor on WhatsApp"
->
-<svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-<path
-d="M16 3C9.373 3 4 8.373 4 15c0 2.64.824 5.086 2.243 7.11L4 29l7.09-2.214A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 2c5.534 0 10 4.466 10 10s-4.466 10-10 10a9.9 9.9 0 0 1-4.84-1.283l-.346-.197-4.19 1.308 1.37-4.06-.225-.356A9.9 9.9 0 0 1 6 15C6 9.466 10.466 5 16 5Zm-3.14 4.5c-.262 0-.684.098-1.04.492-.356.394-1.365 1.332-1.365 3.25 0 1.918 1.398 3.77 1.594 4.028.197.262 2.686 4.29 6.64 5.836 3.28 1.29 3.95 1.163 4.66 1.09.71-.072 2.29-.936 2.613-1.84.324-.904.324-1.68.23-1.84-.098-.164-.36-.262-.753-.46-.394-.197-2.33-1.15-2.69-1.282-.356-.132-.616-.197-.876.197-.262.394-1.006 1.282-1.233 1.544-.228.262-.455.295-.848.098-.394-.197-1.663-.613-3.167-1.953-1.171-1.044-1.96-2.336-2.188-2.73-.228-.394-.024-.606.172-.803.176-.176.394-.46.59-.69.196-.23.262-.394.394-.656.132-.262.066-.492-.033-.69-.098-.197-.86-2.063-1.194-2.824-.295-.69-.6-.748-.861-.756Z"
-/>
-</svg>
-</a>
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        backdrop-filter: blur(22px);
+        background: linear-gradient(to bottom, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 0.7));
+        border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+      }
 
+      .shell {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-inline: 1.25rem;
+      }
 
-<script>
-function scrollToId(id) {
-const el = document.getElementById(id);
-if (!el) return;
-el.scrollIntoView({ behavior: "smooth", block: "start" });
-}
+      .nav {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
 
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        cursor: pointer;
+      }
 
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
+      .brand-logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: conic-gradient(from 210deg, #22c55e, #22c55e, #38bdf8, #6366f1, #22c55e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.9);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
 
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
 
-navToggle.addEventListener("click", () => {
-navLinks.classList.toggle("open");
-});
+      .brand-line1 {
+        text-transform: uppercase;
+        font-size: 0.83rem;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+      }
 
+      .brand-line2 {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+      }
 
-navLinks.querySelectorAll("a").forEach((link) => {
-link.addEventListener("click", () => {
-navLinks.classList.remove("open");
-});
-});
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        font-size: 0.9rem;
+      }
 
+      .nav-links a {
+        color: var(--text-muted);
+        position: relative;
+      }
 
-function openDemoForm() {
-window.open("https://forms.gle/s6c62Bbx6F3NLyaFA", "_blank");
-}
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -0.3rem;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(to right, #22c55e, #38bdf8);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.16s ease-out;
+      }
 
+      .nav-links a:hover {
+        color: var(--text-main);
+      }
 
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
+      .nav-links a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav-cta {
+        padding: 0.5rem 1.1rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        background: radial-gradient(circle at top left, #22c55e, #16a34a);
+        color: #052e16;
+        font-weight: 700;
+        box-shadow: 0 14px 32px rgba(22, 163, 74, 0.7);
+      }
+
+      .nav-cta:hover {
+        transform: translateY(-1px);
+      }
+
+      .nav-toggle {
+        display: none;
+        border: none;
+        background: transparent;
+        color: var(--text-main);
+        cursor: pointer;
+      }
+
+      .nav-toggle svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 1.75rem 1.25rem 3rem;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .hero-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.35rem 0.9rem 0.35rem 0.3rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.35), rgba(15, 23, 42, 0.96));
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+        font-size: 0.78rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .hero-pill-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 30% 20%, #e5e7eb, #22c55e, #22d3ee);
+        box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.9);
+      }
+
+      .hero-heading {
+        font-size: clamp(2.3rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-heading span {
+        background: linear-gradient(120deg, #22c55e, #22d3ee, #6366f1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        max-width: 32rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .hero-meta {
+        font-size: 0.84rem;
+        color: var(--text-muted);
+        margin-bottom: 1.7rem;
+      }
+
+      .hero-meta span {
+        color: #bbf7d0;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        border-radius: 999px;
+        padding: 0.85rem 1.4rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out;
+      }
+
+      .btn-primary {
+        background: radial-gradient(circle at top left, #22c55e, #16a34a);
+        color: #052e16;
+        box-shadow: 0 18px 40px rgba(22, 163, 74, 0.7);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 22px 52px rgba(21, 128, 61, 0.8);
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        background: rgba(15, 23, 42, 0.95);
+        color: var(--text-main);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(15, 23, 42, 1);
+        transform: translateY(-1px);
+      }
+
+      .btn-primary svg,
+      .btn-secondary svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .hero-glance {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.1rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+
+      .hero-glance span {
+        display: block;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #e5e7eb;
+      }
+
+      .hero-card {
+        border-radius: 1.7rem;
+        background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 0.98));
+        border: 1px solid rgba(55, 65, 81, 0.75);
+        padding: 1.2rem 1.4rem;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.9);
+      }
+
+      .hero-card-kicker {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #bfdbfe;
+        margin-bottom: 0.4rem;
+      }
+
+      .hero-card-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+      }
+
+      .hero-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65rem 0.75rem;
+        font-size: 0.78rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .chip {
+        border-radius: 999px;
+        padding: 0.25rem 0.8rem;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        font-size: 0.74rem;
+        text-align: center;
+      }
+
+      .hero-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.78rem;
+        color: #e5e7eb;
+      }
+
+      .hero-card-footer span {
+        color: #bbf7d0;
+      }
+
+      .section {
+        margin-top: 3rem;
+      }
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .section-kicker {
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #a5b4fc;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .section-subtitle {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        gap: 1.8rem;
+      }
+
+      .about-text {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      .about-text p + p {
+        margin-top: 0.7rem;
+      }
+
+      .about-points {
+        list-style: none;
+        margin-top: 0.9rem;
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .about-points li {
+        display: flex;
+        gap: 0.45rem;
+        align-items: flex-start;
+      }
+
+      .about-points span {
+        font-size: 0.7rem;
+        margin-top: 0.15rem;
+      }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .stat-card {
+        border-radius: 1.1rem;
+        padding: 0.9rem 1rem;
+        background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.22), rgba(15, 23, 42, 0.98));
+        border: 1px solid rgba(55, 65, 81, 0.85);
+        font-size: 0.8rem;
+      }
+
+      .stat-number {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .stat-label {
+        color: var(--text-muted);
+      }
+
+      .stat-note {
+        margin-top: 0.35rem;
+        font-size: 0.73rem;
+      }
+
+      .card-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .card-simple {
+        border-radius: 1.1rem;
+        padding: 1rem 1.05rem;
+        background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.3), rgba(15, 23, 42, 0.98));
+        border: 1px solid rgba(55, 65, 81, 0.85);
+        font-size: 0.83rem;
+        text-align: left;
+      }
+
+      .card-simple h3 {
+        font-size: 0.98rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .subject-chip {
+        border-radius: 999px;
+        padding: 0.6rem 0.8rem;
+        background: rgba(15, 23, 42, 0.96);
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        font-size: 0.82rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .jobs-note {
+        font-size: 0.86rem;
+        color: var(--text-muted);
+        margin-top: 0.6rem;
+      }
+
+      footer {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 1.6rem 1.25rem 2.2rem;
+        border-top: 1px solid rgba(31, 41, 55, 0.95);
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      footer strong {
+        color: #e5e7eb;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 0.9rem;
+      }
+
+      .footer-links a:hover {
+        color: #e5e7eb;
+      }
+
+      .whatsapp-button {
+        position: fixed;
+        right: 1.4rem;
+        bottom: 1.4rem;
+        width: 54px;
+        height: 54px;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top left, #22c55e, #16a34a);
+        box-shadow: 0 20px 45px rgba(21, 128, 61, 0.85);
+        color: #ecfdf5;
+        border: none;
+        cursor: pointer;
+        z-index: 40;
+      }
+
+      .whatsapp-button svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      .whatsapp-button:hover {
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .two-col {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero-card {
+          order: -1;
+        }
+
+        .card-grid-3 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .subjects-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          inset: 64px 1.25rem auto 1.25rem;
+          border-radius: 1rem;
+          padding: 0.85rem 1rem;
+          background: rgba(15, 23, 42, 0.97);
+          border: 1px solid rgba(55, 65, 81, 0.9);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.75rem;
+          transform-origin: top;
+          transform: scaleY(0.6);
+          opacity: 0;
+          pointer-events: none;
+          transition: transform 0.16s ease-out, opacity 0.16s ease-out;
+        }
+
+        .nav-links.open {
+          opacity: 1;
+          pointer-events: auto;
+          transform: scaleY(1);
+        }
+
+        .nav-cta {
+          align-self: stretch;
+          text-align: center;
+        }
+
+        .nav-toggle {
+          display: inline-flex;
+        }
+
+        .hero {
+          gap: 2rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        main {
+          padding-inline: 1rem;
+        }
+
+        .card-grid-3,
+        .subjects-grid,
+        .stat-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="shell">
+        <nav class="nav">
+          <div class="brand" onclick="scrollToId('top')">
+            <div class="brand-logo">OYS</div>
+            <div class="brand-text">
+              <div class="brand-line1">OYS Tutor</div>
+              <div class="brand-line2">On Your Service for Learning</div>
+            </div>
+          </div>
+          <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#tutor-jobs">Tutor Jobs</a>
+            <a href="#contact">Contact</a>
+            <button class="nav-cta" onclick="openDemoForm()">FREE DEMO CLASS</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="top"></div>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-pill">
+            <div class="hero-pill-dot"></div>
+            <span><strong>OYS Tutor</strong> &mdash; Online + Home Tuition in Bangalore.</span>
+          </div>
+          <h1 class="hero-heading">
+            Personalised online &amp; home tutoring in Bangalore,
+            <span>At Your Service</span> for every student.
+          </h1>
+          <p class="hero-subtitle">
+            Live 1:1 and small group classes for Maths, Science, English, Coding, SST and Hindi.
+            Online anywhere in India and home tutoring in select areas of Bangalore.
+          </p>
+          <p class="hero-meta">
+            <span>Free demo class</span> for new students. Fees start at ₹150/hour (online) and ₹450/hour (home), paid daily after each session.
+          </p>
+
+          <div class="hero-actions">
+            <a href="javascript:void(0)" class="btn-primary" onclick="openDemoForm()">
+              <span>📞 Free Demo Class</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#tutor-jobs" class="btn-secondary">
+              <span>👨‍🏫 Join as Tutor</span>
+            </a>
+          </div>
+
+          <div class="hero-glance">
+            <div>
+              <span>1:1 focus</span>
+              Calm, doubt-friendly sessions.
+            </div>
+            <div>
+              <span>Flexible slots</span>
+              Morning &amp; evening timings.
+            </div>
+            <div>
+              <span>Parent updates</span>
+              Simple progress notes after class.
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="OYS Tutor at a glance">
+          <div class="hero-card-kicker">Snapshot</div>
+          <div class="hero-card-title">Your tutor, on your schedule.</div>
+          <div class="hero-card-grid">
+            <div><div class="chip">Classes 4 &ndash; 12</div></div>
+            <div><div class="chip">Boards: CBSE / ICSE / State</div></div>
+            <div><div class="chip">Online pan-India</div></div>
+            <div><div class="chip">Home tuitions in Bangalore</div></div>
+          </div>
+          <div class="hero-card-footer">
+            <div>Online: <span>₹150 / hour</span></div>
+            <div>Home: <span>₹450 / hour</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About OYS Tutor</div>
+            <h2 class="section-title">On Your Service, in every chapter and exam.</h2>
+          </div>
+          <p class="section-subtitle">
+            OYS (On Your Service) Tutor helps students build confidence with structured, friendly teaching.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="about-text">
+            <p>
+              We focus on concept clarity first, then exam practice. Sessions are designed to be calm and practical so that students can ask doubts freely and move at a comfortable speed.
+            </p>
+            <p>
+              Parents receive simple updates on topics covered, homework, and upcoming targets. Our aim is to reduce stress for both students and parents during the school year.
+            </p>
+            <ul class="about-points">
+              <li>
+                <span>✔</span>
+                <div>Personalised plan based on your school syllabus and exam dates.</div>
+              </li>
+              <li>
+                <span>✔</span>
+                <div>Support across subjects: Maths, Science, English, Coding, SST and Hindi.</div>
+              </li>
+              <li>
+                <span>✔</span>
+                <div>Help for homework, tests, projects and last-minute revision.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-number">1:1</div>
+              <div class="stat-label">Student attention</div>
+              <p class="stat-note">No rushing through big batches. Sessions follow the student's pace.</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">Bangalore</div>
+              <div class="stat-label">Home tuition HQ</div>
+              <p class="stat-note">Home tutoring available in select areas, with online support as backup.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="subjects">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Subjects</div>
+            <h2 class="section-title">Subjects we cover at OYS Tutor.</h2>
+          </div>
+          <p class="section-subtitle">
+            Clear, simple teaching across core subjects. You can start with one and add more later.
+          </p>
+        </div>
+
+        <div class="subjects-grid">
+          <div class="subject-chip">Mathematics</div>
+          <div class="subject-chip">Science</div>
+          <div class="subject-chip">English</div>
+          <div class="subject-chip">Coding Basics</div>
+          <div class="subject-chip">SST</div>
+          <div class="subject-chip">Hindi</div>
+          <div class="subject-chip">Exam Strategy</div>
+          <div class="subject-chip">Doubt / Homework Support</div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Pricing</div>
+            <h2 class="section-title">Simple, transparent fees structure.</h2>
+          </div>
+          <p class="section-subtitle">
+            Fees are paid on a daily basis after each session. No long lock-in packages.
+          </p>
+        </div>
+
+        <div class="card-grid-3">
+          <article class="card-simple">
+            <h3>Online Classes</h3>
+            <p>
+              Live 1:1 or small group classes over video call with screen sharing & notes.
+            </p>
+            <p class="jobs-note"><strong>₹150 per hour</strong> &mdash; paid daily after class.</p>
+          </article>
+          <article class="card-simple">
+            <h3>Home Tutoring (Bangalore)</h3>
+            <p>
+              In-person classes at your home in select areas of Bangalore, subject to availability.
+            </p>
+            <p class="jobs-note"><strong>₹450 per hour</strong> &mdash; payment after each visit.</p>
+          </article>
+          <article class="card-simple">
+            <h3>Scheduling & Payments</h3>
+            <p>
+              Choose weekdays / weekends and time slots. We confirm schedule weekly as per your routine.
+            </p>
+            <p class="jobs-note">Payments via UPI / bank transfer / cash, as mutually decided.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="tutor-jobs">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Tutor opportunity</div>
+            <h2 class="section-title">Apply for home &amp; online tutor jobs.</h2>
+          </div>
+          <p class="section-subtitle">
+            If you are a tutor looking for home tuition or online classes with OYS Tutor, share your details using the form below.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="about-text">
+            <p>
+              We are building a small network of patient, concept-focused tutors who can handle school curriculum, explain clearly and communicate politely with parents.
+            </p>
+            <ul class="about-points">
+              <li>
+                <span>✔</span>
+                <div>Home tutoring opportunities inside Bangalore (area-wise matching).</div>
+              </li>
+              <li>
+                <span>✔</span>
+                <div>Online class opportunities for Maths, Science, English, Coding, SST and Hindi.</div>
+              </li>
+              <li>
+                <span>✔</span>
+                <div>Flexible hours &mdash; choose evenings, weekends or limited weekly slots.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-number">Step 1</div>
+              <div class="stat-label">Fill tutor form</div>
+              <p class="stat-note">Share subjects, classes, area and availability.</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">Step 2</div>
+              <div class="stat-label">Shortlisting call</div>
+              <p class="stat-note">We connect on WhatsApp / call when a matching requirement comes.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="jobs-note">
+          To apply as a home or online tutor, please use this Google Form:
+        </p>
+        <a
+          href="https://forms.gle/XDgY867Dc9XwQnqb9"
+          class="btn-secondary"
+          target="_blank"
+          style="margin-top:0.9rem;"
+          >Apply as Tutor (Google Form)</a
+        >
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Free demo</div>
+            <h2 class="section-title">📞 Book a Free Demo Class.</h2>
+          </div>
+          <p class="section-subtitle">
+            Fill a short Google Form and we will contact you to discuss your child&apos;s needs, timing and fees.
+          </p>
+        </div>
+
+        <p class="about-text">
+          Use the button below to open the demo class request form. You&apos;ll also find our WhatsApp number in the footer and as a quick chat button on the screen.
+        </p>
+
+        <div style="margin-top:1.2rem; display:flex; flex-wrap:wrap; gap:0.8rem; align-items:center;">
+          <a
+            href="https://forms.gle/s6c62Bbx6F3NLyaFA"
+            class="btn-primary"
+            target="_blank"
+          >
+            Book Free Demo (Form)
+          </a>
+          <a
+            href="https://wa.me/919977874305?text=Hi%20OYS%20Tutor%2C%20I%20am%20interested%20in%20a%20demo%20class"
+            class="btn-secondary"
+            target="_blank"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        &copy; <span id="year"></span> <strong>OYS Tutor</strong>. HQ: Bangalore &mdash; Online &amp; Home Tuition.
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#contact">Free demo</a>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/919977874305?text=Hi%20OYS%20Tutor%2C%20I%20am%20interested%20in%20a%20demo%20class"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat with OYS Tutor on WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path
+          d="M16 3C9.373 3 4 8.373 4 15c0 2.64.824 5.086 2.243 7.11L4 29l7.09-2.214A11.9 11.9 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 2c5.534 0 10 4.466 10 10s-4.466 10-10 10a9.9 9.9 0 0 1-4.84-1.283l-.346-.197-4.19 1.308 1.37-4.06-.225-.356A9.9 9.9 0 0 1 6 15C6 9.466 10.466 5 16 5Zm-3.14 4.5c-.262 0-.684.098-1.04.492-.356.394-1.365 1.332-1.365 3.25 0 1.918 1.398 3.77 1.594 4.028.197.262 2.686 4.29 6.64 5.836 3.28 1.29 3.95 1.163 4.66 1.09.71-.072 2.29-.936 2.613-1.84.324-.904.324-1.68.23-1.84-.098-.164-.36-.262-.753-.46-.394-.197-2.33-1.15-2.69-1.282-.356-.132-.616-.197-.876.197-.262.394-1.006 1.282-1.233 1.544-.228.262-.455.295-.848.098-.394-.197-1.663-.613-3.167-1.953-1.171-1.044-1.96-2.336-2.188-2.73-.228-.394-.024-.606.172-.803.176-.176.394-.46.59-.69.196-.23.262-.394.394-.656.132-.262.066-.492-.033-.69-.098-.197-.86-2.063-1.194-2.824-.295-.69-.6-.748-.861-.756Z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      function scrollToId(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+        });
+      });
+
+      function openDemoForm() {
+        window.open("https://forms.gle/s6c62Bbx6F3NLyaFA", "_blank");
+      }
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
